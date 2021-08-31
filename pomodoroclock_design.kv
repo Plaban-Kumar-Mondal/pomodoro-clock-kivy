@@ -1,0 +1,23 @@
+#:kivy 1.2.0
+<PomodoroClock>
+    FloatLayout:
+        size: root.width, root.height
+        spacing: 20
+
+        Label:
+            id: time_label
+            text: "25"
+            font_size: 120
+            color: (33/255.0, 117/255.0, 252/255.0, 1)
+            halign: "center"
+            size_hint: (0.1, 0.1)
+            pos_hint: {"x": 0.45, "top": 0.7}
+
+        Button:
+            text: "Start"
+            font_size: 26
+            background_normal: ""
+            background_color: (25/255.0, 94/255.0, 207/255.0, 1)
+            size_hint: (0.5, 0.15)
+            pos_hint: {"x": 0.25, "top": 0.35}
+            on_press: root.timer_start()
