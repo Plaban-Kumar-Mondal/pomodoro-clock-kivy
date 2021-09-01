@@ -14,7 +14,7 @@ class PomodoroClock(Widget):
     def timer_start(self):
         self.time_passed = self.countdown_time
         self.ids.time_label.text = str(self.time_passed)
-        Clock.schedule_interval(self.timer_callback, 1)
+        Clock.schedule_interval(self.timer_callback, 60)
 
     def timer_callback(self, dt):
 
